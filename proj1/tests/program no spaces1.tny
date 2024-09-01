@@ -1,0 +1,6 @@
+a:=1;
+b:=2;
+c:=0;
+repeatc:=c+a;
+b:=b-1untilb=0;
+writec

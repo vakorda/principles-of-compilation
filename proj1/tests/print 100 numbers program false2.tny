@@ -1,0 +1,5 @@
+a := 100;
+repeat
+    write a;
+    a :=
+until a = 0

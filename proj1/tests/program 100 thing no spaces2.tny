@@ -1,0 +1,3 @@
+a:=100;
+repeatwritea;
+a:=a-1untila=0

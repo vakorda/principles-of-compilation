@@ -1,0 +1,5 @@
+read b;
+ repeat {hello \}world}
+    write b;
+    b := b - 1
+until b = 0

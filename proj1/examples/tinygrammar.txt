@@ -1,0 +1,68 @@
+"Untreated" Tiny grammar taken from Louden
+==========================================
+
+<program > ::= <stmtseq>
+<stmtseq > ::= <stmtseq> ; <statement>
+           |   <statement>
+<statement> ::= <ifstmt> >
+            |   <repeatstmt>
+            |   <assignstmt>
+            |   <readstmt>
+            |   <writestmt>
+<ifstmt> ::= if <exp> then <stmtseq> end
+         |   if <exp> then <stmtseq> else <stmtseq> end
+<repeatstmt > ::= repeat <stmtseq> until <exp>
+<assignstmt > ::= identifier := <exp>
+<readstmt > ::= read identifier
+<writestmt > ::= write <exp>
+<exp> ::= <simple-expr> <comp-op> <simple-expr>
+      |   <simple-expr>
+<comp-op> ::= < | =
+<simple-expr> ::=<simple-expr> <addop> <term> | <term>
+<addop> ::= + | -
+<term> ::= <term> <mulop> <factor> | <factor>
+<mulop> ::= * | /
+<factor> ::= ( <exp> ) | number | identifier
+
+
+
+
+
+Grammar without left recursion
+==========================================
+
+<program> ::= <stmtseq>
+
+<stmtseq> ::= <statement> ; {<statement>}
+
+<statement> ::= <ifstmt>
+            |   <repeatstmt>
+            |   <assignstmt>
+            |   <readstmt>
+            |   <writestmt>
+
+<ifstmt> ::= if <exp> then <stmtseq> end
+         |   if <exp> then <stmtseq> else <stmtseq> end
+
+<repeatstmt> ::= repeat <stmtseq> until <exp>
+
+<assignstmt> ::= identifier := <exp>
+
+<readstmt> ::= read identifier
+
+<writestmt> ::= write <exp>
+
+<exp> ::= <simple-expr> <comp-op> <simple-expr>
+      |   <simple-expr>
+
+<comp-op> ::= < | =
+
+<simple-expr> ::= <term> {<addop> <term>}
+
+<addop> ::= + | -
+
+<term> ::= <factor> {<mulop> <factor>}
+
+<mulop> ::= * | /
+
+<factor> ::= ( <exp> ) | number | identifier

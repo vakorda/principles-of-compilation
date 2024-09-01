@@ -1,0 +1,13 @@
+{Factorial program in Tiny language -}
+
+read x; {input an integer}
+if 0 < x then {don't compute if x <= 0}
+  fact := 1;
+  repeat
+    fact := fact * x;
+    x := x - 1
+  until x < 0;
+  write fact  {output factorial of x}
+end;
+y := 5 / (8*2) - 3 * 200;
+write y

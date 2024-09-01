@@ -1,0 +1,7 @@
+if 1 < 2 then
+    a := 1
+    else a := 2
+end
+else
+    a := 3
+end

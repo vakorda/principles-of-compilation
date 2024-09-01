@@ -1,0 +1,15 @@
+a := 1;
+{comment}
+b := 2;
+{comme  nt}
+c := 0;
+{comment
+ comment}
+repeat
+    c := c + a;
+    {comment}
+    b := b - 1
+    {comment}
+until b = 0;
+{comment}
+write c

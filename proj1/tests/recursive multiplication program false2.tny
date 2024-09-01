@@ -1,0 +1,7 @@
+a := 1;
+b := 2;
+c := 0;
+repeat
+    c := c + a;
+    b := b - 1 b = 0;
+write c

@@ -1,0 +1,12 @@
+a := 0; 
+b := 0; 
+read a; 
+read b; 
+repeat 
+    if a < b then 
+        b := b - a 
+    else 
+        a := a - b 
+    end 
+until a = b; 
+write a;

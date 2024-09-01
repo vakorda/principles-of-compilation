@@ -1,0 +1,10 @@
+a := 0; 
+b := 0; 
+c := 1; 
+read a; 
+read b; 
+repeat 
+    c := c * a;  
+    b := b - 1 
+until b = 0; 
+write c;

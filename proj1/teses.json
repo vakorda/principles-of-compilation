@@ -1,0 +1,298 @@
+[
+    {   
+        "name": "assign true",
+        "prog": "a := 1",
+        "correct": "true"
+    },
+    {
+        "name": "assign false1",
+        "prog": "a = 1",
+        "correct": "false"
+    },
+    {
+        "name": "end ;",
+        "prog": "a := 1;",
+        "correct": "false"
+    },
+    {   
+        "name": "op1 true",
+        "prog": "a := 1 + 2",
+        "correct": "true"
+    },
+    {
+        "name": "op2 true",
+        "prog": "a := 1 + 2 * 3",
+        "correct": "true"
+    },
+    {
+        "name": "op3 true",
+        "prog": "a := 1 + 2 * 3 / 4",
+        "correct": "true"
+    },
+    {
+        "name": "op4 paren true",
+        "prog": "a := (1 + 2) * 3 / 4",
+        "correct": "true"
+    },
+    {
+        "name": "op5 paren true",
+        "prog": "a := 1 + (2 * 3) / 4",
+        "correct": "true"
+    },
+    {
+        "name": "if true",
+        "prog": "if 1 < 2 then\n    a := 1\nend",
+        "correct": "true"
+    },
+    {
+        "name": "if else true",
+        "prog": "if 1 < 2 then\n    a := 1\nelse\n  a := 2\nend",
+        "correct": "true"
+    },
+    {
+        "name": "if false1",
+        "prog": "if a := 1 then\nend",
+        "correct": "false"
+    },
+    {
+        "name": "if false2",
+        "prog": "if 1 < 2 then\n    a := 1",
+        "correct": "false"
+    },
+    {
+        "name": "if false3",
+        "prog": "if 1 < 2 then\n    a := 1\nelse\n      a := 2",
+        "correct": "false"
+    },
+    {
+        "name": "if false4",
+        "prog": "if 1 < 2 then\n    a := 1\n    else a := 2\nend\nelse\n    a := 3\nend",
+        "correct": "false"
+    },
+    {
+        "name": "if false5",
+        "prog": "if 1 < 2 then\n    a := 1;\nend",
+        "correct": "false"
+    },
+    {
+        "name": "if false6",
+        "prog": "if 1 < 2 then\n    a := 1\nelse\n    a := 2;\nend",
+        "correct": "false"
+    },
+    {
+        "name": "if false7",
+        "prog": "if 1 < 2 then\n    a := 1\nelse\n    a := 2\nend;",
+        "correct": "false"
+    },
+    {
+        "name": "repeat true",
+        "prog": "repeat\n    a := 1\nuntil 1 < 2",
+        "correct": "true"
+    },
+    {
+        "name": "repeat false1",
+        "prog": "repeat\n    a := 1\n1 < 2",
+        "correct": "false"
+    },
+    {
+        "name": "repeat false2",
+        "prog": "repeat\n    a := 1\nuntil 1 < 2;",
+        "correct": "false"
+    },
+    {
+        "name": "repeat false3",
+        "prog": "repeat\n    a := 1\nuntil 1 < 2\nend",
+        "correct": "false"
+    },
+    {
+        "name": "read true",
+        "prog": "read a",
+        "correct": "true"
+    },
+    {
+        "name": "read false1",
+        "prog": "read a;",
+        "correct": "false"
+    },
+    {
+        "name": "write true",
+        "prog": "write a",
+        "correct": "true"
+    },
+    {
+        "name": "write true2",
+        "prog": "write 12",
+        "correct": "true"
+    },
+    {
+        "name": "write false1",
+        "prog": "write a;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive multiplication program",
+        "prog": "a := 1;\nb := 2;\nc := 0;\nrepeat\n    c := c + a;\n   b := b - 1\nuntil b = 0;\nwrite c",
+        "correct": "true"
+    },
+    {
+        "name": "print 100 numbers program",
+        "prog": "a := 100;\nrepeat\n    write a;\n    a := a - 1\nuntil a = 0",
+        "correct": "true"
+
+    },
+    {
+        "name": "2 accounts program",
+        "prog": "a := 0;\nb := 0;\nread a;\nread b;\nwrite a + b",
+        "correct": "true"
+    },
+    {
+        "name": "classify odd or even program",
+        "prog": "a := 0;\nread a;\nif a / 2 * 2 = a then\n    write 0\nelse\n    write 1\nend",
+        "correct": "true"
+    },
+    {
+        "name": "recursive factorial program",
+        "prog": "a := 1;\nb := 1;\nread a;\nrepeat\n    b := b * a;\n    a := a - 1\nuntil a = 0;\nwrite b",
+        "correct": "true"
+    },
+    {
+        "name": "recursive fibonacci program",
+        "prog": "a := 1;\nb := 1;\nc := 0;\nread a;\nrepeat\n    c := a + b;\n    a := b;\n    b := c;\n     a := a - 1\nuntil a = 0;\nwrite c",
+        "correct": "true"
+    },
+    {
+        "name": "recursive gcd program",
+        "prog": "a := 0;\nb := 0;\nread a;\nread b;\nrepeat\n    if a < b then\n        b := b - a\n    else\n        a := a - b\n    end\nuntil a = b;\nwrite a",
+        "correct": "true"
+    },
+    {
+        "name": "recursive power program",
+        "prog": "a := 0;\nb := 0;\nc := 1;\nread a;\nread b;\nrepeat\n    c := c * a;\n    b := b - 1\nuntil b = 0;\nwrite c",
+        "correct": "true"
+    },
+    {
+        "name": "recursive multiplication program false1",
+        "prog": "a := 1;\nb := 2;\nc := 0;\nrepeat\n    c := c + a;\n    b := b - 1\nuntil b = 0;\nwrite c;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive multiplication program false2",
+        "prog": "a := 1;\nb := 2;\nc := 0;\nrepeat\n    c := c + a;\n    b := b - 1 b = 0;\nwrite c",
+        "correct": "false"
+    },
+    {
+        "name": "print 100 numbers program false1",
+        "prog": "a = 100;\nrepeat\n    write a;\n    a = a - 1\nuntil a = 0;",
+        "correct": "false"
+    },
+    {
+        "name": "print 100 numbers program false2",
+        "prog": "a := 100;\nrepeat\n    write a;\n    a :=\nuntil a = 0",
+        "correct": "false"
+    },
+    {
+        "name": "2 accounts program false1",
+        "prog": "a := 0;\nb := 0\n read a;\nread b;\nwrite a + b;",
+        "correct": "false"
+    },
+    {
+        "name": "2 accounts program false2",
+        "prog": "a := 0;\nb := 0;\nred a;\nread b;\nwrite +",
+        "correct": "false"
+    },
+    {
+        "name": "classify odd or even program false1",
+        "prog": "a := 0;\nread a;\nif a / 2 * 2 = a then\n    write 0\nelse\n    write 1\nend;",
+        "correct": "false"
+    },
+    {
+        "name": "classify odd or even program false2",
+        "prog": "a := 0;\nread a;\nif a / 2 * 2 = a\n    write 0\nelse\n    write 1\nend",
+        "correct": "false"
+    },
+    {
+        "name": "recursive factorial program false1",
+        "prog": "a := 1;\nb := 1; \nread a; \nrepeat\n    b := b * a;\n    a := a - 1\nuntil a = 0;\nwrite b;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive factorial program false2",
+        "prog": "a := 1;\nb := 1; \nread a; \nrepeat \n    b b * a; \n    a := a - 1 \nuntil a = 0; \nwrite b",
+        "correct": "false"
+    },
+    {
+        "name": "recursive fibonacci program false1",
+        "prog": "a := 1; \nb := 1; \nc := 0; \nread a; \nrepeat \n    c := a + b; \n    a := b; \n    b := c; \n    a := a - 1 \nuntil a = 0; \nwrite c;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive fibonacci program false2",
+        "prog": "a := 1; \nb := 1; \nc := 0; \n- 1 \nuntil a = 0;\nwrite c",
+        "correct": "false"
+    },
+    {
+        "name": "recursive gcd program false1",
+        "prog": "a := 0; \nb := 0; \nread a; \nread b; \nrepeat \n    if a < b then \n        b := b - a \n    else \n        a := a - b \n    end \nuntil a = b; \nwrite a;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive gcd program false2",
+        "prog": "a := 0; \nb := 0; \nread a; \nread b; \nrepeat \n    if a > b then \n        b := b - a \n    else \n        a := a - b \n    end \nuntil a = b;\nwrite a",
+        "correct": "false"
+    },
+    {
+        "name": "recursive power program false1",
+        "prog": "a := 0; \nb := 0; \nc := 1; \nread a; \nread b; \nrepeat \n    c := c * a;  \n    b := b - 1 \nuntil b = 0; \nwrite c;",
+        "correct": "false"
+    },
+    {
+        "name": "recursive power program false2",
+        "prog": "a := 0; \nb := 0; \nc := 1; \nread a; \nread b; \nrepeat \n    c := c a;  \n    b := b - 1 \nuntil b = 0; \nwrite c",
+        "correct": "false"
+    },
+    {
+        "name": "recursive multiplication program false3",
+        "prog": "a := 1; \nb := 2; \nc := 0; \nrepeat \n    c := c + a; \n    b := b - 1 \nuntil b = 0\nwrite c",
+        "correct": "false"
+    },
+    {
+        "name": "print 100 numbers program false3",
+        "prog": "a := 100; \nrepeat \n    write a a := a - 1 \nuntil a = 0",
+        "correct": "false"
+    },
+    {
+        "name": "2 accounts program false3",
+        "prog": "a := 0; \nb := 0; \nread a; \nread b \nwrite a + b",
+        "correct": "false"
+    },
+    {
+        "name": "program no spaces1",
+        "prog": "a:=1;\nb:=2;\nc:=0;\nrepeatc:=c+a;\nb:=b-1untilb=0;\nwritec",
+        "correct": "false"
+    },
+    {
+        "name": "program 100 thing no spaces2",
+        "prog": "a:=100;\nrepeatwritea;\na:=a-1untila=0",
+        "correct": "false"
+    },
+    {
+        "name": "program 2 accounts no spaces3",
+        "prog": "a:=0;\nb:=0;\nreada;\nreadb;\nwritea+b",
+        "correct": "false"
+    },
+    {
+        "name": "program classify odd or even no spaces4",
+        "prog": "a:=0;\nreada;\nifa/2*2=athenwrite;\nelsewrite1end",
+        "correct": "false"
+    },
+    {
+        "name": "comments program1",
+        "prog": "a := 1;\n{comment}\nb := 2;\n{comme  nt}\nc := 0;\n{comment\n comment}\nrepeat\n    c := c + a;\n    {comment}\n    b := b - 1\n    {comment}\nuntil b = 0;\n{comment}\nwrite c",
+        "correct": "true"
+    },
+    {
+        "name": "comments program2",
+        "prog": "read b;\n repeat {hello \\}world}\n    write b;\n    b := b - 1\nuntil b = 0",
+        "correct": "false"
+    }
+]
